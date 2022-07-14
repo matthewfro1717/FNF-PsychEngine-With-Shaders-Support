@@ -10,7 +10,7 @@ import WiggleEffect.WiggleEffectType;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
-import openfl.filter.ShaderFilter
+import openfl.filter.ShaderFilter;
 import Shaders;
 import flixel.FlxGame;
 import flixel.FlxObject;

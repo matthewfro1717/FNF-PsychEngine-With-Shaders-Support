@@ -39,7 +39,7 @@ import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
 import haxe.Json;
 import lime.utils.Assets;
-import openfl.filter.ShaderFilter;
+import openfl.filters.ShaderFilter;
 import Shaders;
 import openfl.Lib;
 import openfl.display.BlendMode;

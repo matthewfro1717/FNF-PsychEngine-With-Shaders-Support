@@ -1,4 +1,6 @@
-	setProperty('scoreTxt.visible', false)
+function onCreate()
+
+        setProperty('scoreTxt.visible', false)
     	setProperty('timeBarBG.visible', false)
     	setProperty('timeBar.visible', false)
    	setProperty('timeTxt.visible', false)'
@@ -26,3 +28,5 @@
 	setTextAlignment('dikescore3','CENTER')
 	setTextSize('dikescore3', 16)
 	addLuaText('dikescore3')
+    end
+end

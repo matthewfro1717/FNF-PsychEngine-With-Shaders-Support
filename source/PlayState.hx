@@ -1154,7 +1154,7 @@ class PlayState extends MusicBeatState
 		                iconP1.alpha = ClientPrefs.healthBarAlpha;
 		                add(iconP1);
 				
-				iconP2 = new HealthIcon(boyfriend.healthIcon,  1305, 903, true);
+				iconP2 = new HealthIcon(boyfriend.healthIcon, 1305, 903, true);
 		                iconP2.visible = !ClientPrefs.hideHud;
 		                iconP2.alpha = ClientPrefs.healthBarAlpha;
 		                add(iconP2);

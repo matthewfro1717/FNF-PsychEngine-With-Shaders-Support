@@ -1142,19 +1142,25 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		moveCameraSection();
 
-		var healthBarPath:FlxSprite;
 		switch (SONG.song.toLowerCase())
 		{
 			case 'kooky':
-				healthBarPath = Paths.image('kookybar', 1116, 404);
-			        healthBarPath.y = FlxG.height * 0.8;
+				healthBarBG = new AttachedSprite('kookybar', 1116, 404);
+			        healthBarBG.y = FlxG.height * 0.8;
+		                healthBarBG.screenCenter(X);
+		                healthBarBG.scrollFactor.set();
+	                 	healthBarBG.visible = !ClientPrefs.hideHud;
+		                healthBarBG.xAdd = -4;
+		                healthBarBG.yAdd = -4;
+		                add(healthBarBG);
+		                if(ClientPrefs.downScroll) healthBarBG.y = 0.11 * FlxG.height;
 				
-				iconP1 = new HealthIcon(boyfriend.healthIcon, 1093, 345, true);
+				iconP1 = new HealthIcon('boyfriend.healthIcon', 1093, 345, true);
 		                iconP1.visible = !ClientPrefs.hideHud;
 		                iconP1.alpha = ClientPrefs.healthBarAlpha;
 		                add(iconP1);
 				
-				iconP2 = new HealthIcon(boyfriend.healthIcon, 1305, 903, true);
+				iconP2 = new HealthIcon('boyfriend.healthIcon', 1305, 903, true);
 		                iconP2.visible = !ClientPrefs.hideHud;
 		                iconP2.alpha = ClientPrefs.healthBarAlpha;
 		                add(iconP2);

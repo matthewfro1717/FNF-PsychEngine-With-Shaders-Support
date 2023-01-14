@@ -1142,6 +1142,32 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		moveCameraSection();
 
+		}
+		
+		var healthBarPath = '';
+		switch (SONG.song.toLowerCase())
+		{
+			case 'kooky':
+				healthBarPath = Paths.image('kookybar');
+				healthBarPath.xAdd = 1116;
+			        healthBarPath.yAdd = 404;
+			        healthBarPath.y = FlxG.height * 0.8;
+				
+				iconP1 = new HealthIcon(boyfriend.healthIcon, true);
+		                iconP1.x = 1093
+				iconP1.y = 345
+		                iconP1.visible = !ClientPrefs.hideHud;
+		                iconP1.alpha = ClientPrefs.healthBarAlpha;
+		                add(iconP1);
+				
+				iconP2 = new HealthIcon(boyfriend.healthIcon, true);
+		                iconP2.x = 1305
+				iconP2.y = 903
+		                iconP2.visible = !ClientPrefs.hideHud;
+		                iconP2.alpha = ClientPrefs.healthBarAlpha;
+		                add(iconP2);
+		}
+
 		healthBarBG = new AttachedSprite('healthBar');
 		healthBarBG.y = FlxG.height * 0.89;
 		healthBarBG.screenCenter(X);

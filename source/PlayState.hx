@@ -1142,8 +1142,6 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		moveCameraSection();
 
-		}
-		
 		var healthBarPath = '';
 		switch (SONG.song.toLowerCase())
 		{
